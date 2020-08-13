@@ -1,0 +1,19 @@
+extends ../layout/common.pug
+
+block content
+    h1.display-1 Books
+    ul.list-group
+        each book in books
+            li.list-group-item
+                span= book.name
+                span &nbsp;
+                a(href="/books/view/" + book.id) View
+                span &nbsp;
+                a(href="/books/delete/" + book.id, style="color: red") Delete
+                span &nbsp;
+                a(href="/books/edit/" + book.id, style="color: green") Edit
+    p
+        a.btn.btn-primary(href="/books/add") Add book
+        span &nbsp;
+        a.btn.btn-primary(href="/") Back
+        

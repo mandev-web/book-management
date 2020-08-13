@@ -1,0 +1,20 @@
+html
+  head
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    link(rel="shortcut icon" type="image/png" href="/pictures/favicon.png")
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      #navbarSupportedContent.collapse.navbar-collapse
+        img(src="../pictures/logo2.png")
+        span &nbsp;
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/users', style="font-size: 30px")
+              | Users 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/books', style="font-size: 30px") Books
+          li.nav-item
+            a.nav-link(href='/transactions', style="font-size: 30px") Transactions
+    .container.pt-5
+        block content

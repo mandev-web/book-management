@@ -1,0 +1,21 @@
+extends ../layout/common.pug
+
+block content
+
+    h1.display-1 Add users
+    form(action="/transactions/add", method="POST")
+      .form-group
+        select.custom-select(name="name")
+            option(selected='') Select user
+            each user in users
+                option()= user.name
+
+        span &nbsp;
+
+        select.custom-select(name="name")
+            option(selected='') Select book
+            each book in books
+                option()= book.name
+      button.btn.btn-primary(type='submit') Submit
+      span &nbsp;
+      a.btn.btn-primary(href="/books") Back

@@ -1,0 +1,11 @@
+extends ../layout/common.pug
+
+block content
+    h2.display-1= book.name
+
+    p
+        span= book.content
+    
+    p
+        a.btn.btn-primary(href="/books") Back
+

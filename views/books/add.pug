@@ -1,0 +1,12 @@
+extends ../layout/common.pug
+
+block content
+    h1.display-1 Add book
+    form(action="/books/add", method="POST")
+        .form-group
+            label Title
+            input#exampleInputEmail1.form-control(type='text',name="name")
+        button.btn.btn-primary(type='submit') Submit
+        span &nbsp;
+        a.btn.btn-primary(href="/books") Back
+

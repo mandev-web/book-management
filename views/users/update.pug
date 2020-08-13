@@ -1,0 +1,46 @@
+extends ../layout/common.pug
+
+block content
+
+    h1.display-1 Edit user
+    p
+        span Name:
+        span &nbsp;
+        span= user.name
+        span &nbsp;
+        form(action='/users/edit/' + user.id, method="POST")
+            .form-group
+                .col-sm-3.my-1
+                    input#inlineFormInputName.form-control(type='text', placeholder='Edit name', name="name")
+                    button.btn.btn-primary(type='submit') Submit
+    p
+        span Age:
+        span &nbsp;
+        span= user.age
+        span &nbsp;
+        form(action='/users/edit/' + user.id, method="POST")
+            .form-group
+                .col-sm-3.my-1
+                    input#inlineFormInputName.form-control(type='text', placeholder='Edit age', name="age")
+                    button.btn.btn-primary(type='submit') Submit
+    p
+        span Mail:
+        span &nbsp;
+        span= user.mail
+        span &nbsp;
+        form(action='/users/edit/' + user.id, method="POST")
+            .form-group
+                .col-sm-3.my-1
+                    input#inlineFormInputName.form-control(type='text', placeholder='Edit name', name="mail")
+                    button.btn.btn-primary(type='submit') Submit
+    p
+        span Job:
+        span &nbsp;
+        span= user.job
+        span &nbsp;
+        form(action='/users/edit/' + user.id, method="POST")
+            .form-group
+                .col-sm-3.my-1
+                    input#inlineFormInputName.form-control(type='text', placeholder='Edit name', name="job")
+                    button.btn.btn-primary(type='submit') Submit
+

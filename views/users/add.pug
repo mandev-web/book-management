@@ -1,0 +1,17 @@
+extends ../layout/common.pug
+
+block content
+    h1.display-1 Add users
+    form(action="/users/add", method="POST")
+        .form-group
+            label Name
+            input#exampleInputEmail1.form-control(type='text',name="name")
+            label Mail
+            input#exampleInputEmail1.form-control(type='mail',name="mail")
+            label Age
+            input#exampleInputEmail1.form-control(type='number',name="age")
+            label Job
+            input#exampleInputEmail1.form-control(type='text',name="job")
+        button.btn.btn-primary(type='submit') Submit
+        span &nbsp;
+        a.btn.btn-primary(href="/books") Back

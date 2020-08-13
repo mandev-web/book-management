@@ -1,0 +1,22 @@
+extends ../layout/common.pug
+
+block content
+    each user in users
+        if user.id == transaction.idUser
+            span= user.name
+            span &nbsp;
+            span -----
+            span &nbsp;
+    each book in books
+        if book.id == transaction.idBook
+            span= book.name
+    form(action="/transactions/edit/" + transaction.id, method="POST")
+        .form-check
+            input#exampleRadios1.form-check-input(type='radio', name='status', value='true', checked='')
+            label.form-check-label(for='exampleRadios1')
+                | Have completed
+        .form-check
+            input#exampleRadios2.form-check-input(type='radio', name='status', value='false')
+            label.form-check-label(for='exampleRadios2')
+                | Haven't completed
+        button.btn.btn-primary(type='submit') Submit

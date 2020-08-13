@@ -1,0 +1,60 @@
+{
+  "books": [
+    {
+      "name": "CEA",
+      "id": "0rh7itSeC",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    },
+    {
+      "name": "CSI",
+      "id": "Q4_rPKr0E",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    },
+    {
+      "name": "PRF",
+      "id": "3pvOi0m4J",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+    },
+    {
+      "name": "CEA",
+      "id": "w56kCgeW5",
+      "content": "lorem Ipsum is simply dummy text of the printing and"
+    }
+  ],
+  "users": [
+    {
+      "name": "Man",
+      "id": "qIc6BeI4q",
+      "mail": "nnman.vn@gmail.com",
+      "age": "20",
+      "job": "Senior Developer"
+    },
+    {
+      "name": "Minh",
+      "mail": "zaszaszasminh@gmail.com",
+      "age": "24",
+      "job": "Personal Trainer & Developer",
+      "id": "0MK164Yn-"
+    }
+  ],
+  "transactions": [
+    {
+      "idUser": "qIc6BeI4q",
+      "idBook": "0rh7itSeC",
+      "id": "GyDHuGXD5",
+      "isComplete": false
+    },
+    {
+      "idUser": "qIc6BeI4q",
+      "idBook": "3pvOi0m4J",
+      "id": "sLTzvUy-L",
+      "isComplete": false
+    },
+    {
+      "idUser": "0MK164Yn-",
+      "idBook": "3pvOi0m4J",
+      "id": "imkzlf2R_",
+      "isComplete": true
+    }
+  ]
+}

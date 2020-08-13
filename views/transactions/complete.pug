@@ -1,0 +1,28 @@
+extends ../layout/common.pug
+
+block content
+    h1.display-1 Edit transaction
+    ul.list-group
+        each transaction in transactions
+            li.list-group-item
+                each user in users
+                    if user.id == transaction.idUser
+                        span= user.name
+                span &nbsp;
+                span -----
+                span &nbsp;
+                each book in books
+                    if book.id == transaction.idBook
+                        span= book.name
+                span &nbsp;
+                a(href="/transactions/delete/" + transaction.id, style="color: red") Delete
+                span &nbsp;
+                if transaction.isComplete == false
+                  span(style="color: grey") Haven't Completed
+                else 
+                  span(style="color: green") Have Completed
+                span &nbsp;
+                a(href="/transactions/edit/" + transaction.id, style="color: blue") Edit
+                
+
+
