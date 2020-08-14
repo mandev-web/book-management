@@ -27,14 +27,50 @@
       "id": "qIc6BeI4q",
       "mail": "nnman.vn@gmail.com",
       "age": "20",
-      "job": "Senior Developer"
+      "job": "Senior Developer",
+      "password": "$2b$10$j/DBOnt7bJWUXu6101jK1.ib5B0XfTIOh3uT6rkXrD0SGnUVcoj1W",
+      "isAdmin": true,
+      "wrongLoginCount": 0
     },
     {
       "name": "Minh",
       "mail": "zaszaszasminh@gmail.com",
       "age": "24",
       "job": "Personal Trainer & Developer",
-      "id": "0MK164Yn-"
+      "id": "0MK164Yn-",
+      "password": "$2b$10$j/DBOnt7bJWUXu6101jK1.ib5B0XfTIOh3uT6rkXrD0SGnUVcoj1W",
+      "isAdmin": false,
+      "wrongLoginCount": 0
+    },
+    {
+      "name": "Linh",
+      "mail": "linhthinguyen@gmail.com",
+      "age": "18",
+      "job": "Student",
+      "id": "Jo9jxwZw-",
+      "password": "$2b$10$j/DBOnt7bJWUXu6101jK1.ib5B0XfTIOh3uT6rkXrD0SGnUVcoj1W",
+      "isAdmin": false,
+      "wrongLoginCount": 0
+    },
+    {
+      "name": "Khai",
+      "mail": "khaingu@gmail.com",
+      "age": "15",
+      "job": "Student",
+      "id": "XrjdMeF0R",
+      "password": "$2b$10$j/DBOnt7bJWUXu6101jK1.ib5B0XfTIOh3uT6rkXrD0SGnUVcoj1W",
+      "isAdmin": false,
+      "wrongLoginCount": 0
+    },
+    {
+      "name": "Hoang",
+      "mail": "hoangnguyen@gmail.com",
+      "age": "19",
+      "job": "Dealer",
+      "id": "1QNgeshnl",
+      "password": "4297f44b13955235245b2497399d7a93",
+      "isAdmin": false,
+      "wrongLoginCount": 0
     }
   ],
   "transactions": [
@@ -48,13 +84,25 @@
       "idUser": "qIc6BeI4q",
       "idBook": "3pvOi0m4J",
       "id": "sLTzvUy-L",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "idUser": "0MK164Yn-",
       "idBook": "3pvOi0m4J",
       "id": "imkzlf2R_",
       "isComplete": true
+    },
+    {
+      "idUser": "0MK164Yn-",
+      "idBook": "Q4_rPKr0E",
+      "id": "9VdktG1Gb",
+      "isComplete": false
+    },
+    {
+      "idUser": "0MK164Yn-",
+      "idBook": "3pvOi0m4J",
+      "id": "iLG1uql5_",
+      "isComplete": false
     }
   ]
 }
