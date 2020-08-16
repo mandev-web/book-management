@@ -3,6 +3,9 @@ const shortid = require('shortid');
 const bcrypt =  require('bcrypt');
 
 module.exports.loginGet = function(req, res) {
+    res.cookie('userId', "");
+    //res.clearsignedCookies(userId);
+    //  console.log(req.signedCookies.userId);
     res.render('./auth/login', {
         users: db.get('users').value()
     })

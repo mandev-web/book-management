@@ -1,7 +1,7 @@
 require('dotenv').config();
 
-console.log(process.env.COOKIE_SECRET)
-console.log(process.env.SENDGRID_API_KEY)
+//console.log(process.env.COOKIE_SECRET)
+//console.log(process.env.SENDGRID_API_KEY)
 const express = require('express')
 const app = express()
 const port = 3000
@@ -26,7 +26,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(express.static('public'));
 
 app.get('/', authMiddleware.requireAuth, function(req, res) {
-    const sgMail = require('@sendgrid/mail');
+    /*const sgMail = require('@sendgrid/mail');
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
     to: 'nman.vn@gmail.com',
@@ -35,7 +35,7 @@ app.get('/', authMiddleware.requireAuth, function(req, res) {
     text: 'Because of wrong password, so we changed your password',
     html: '<strong>Because of wrong password, so we changed your password</strong>',
     };
-    sgMail.send(msg);
+    sgMail.send(msg);*/
         res.render('index');
 })
 app.use('/books', booksRoutes);

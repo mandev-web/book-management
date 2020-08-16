@@ -17,3 +17,9 @@ block content
         span Job:
         span &nbsp;
         span= user.job
+    p   
+        span Avatar:
+        span &nbsp;
+        if user.avatar
+            span    
+             img(src="http://localhost:3000/" + user.avatar, style="width: 30px")

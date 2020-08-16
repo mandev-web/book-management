@@ -1,9 +1,10 @@
 var db = require('../db');
 const shortid = require('shortid');
-const e = require('express');
+const express = require('express');
 
 module.exports.index = function(req, res) {
-    var id = req.cookies.userId;
+    console.log(req.singedCookies);
+    var id = req.signedCookies.userId;
     var user = db.get('users').find({id: id}).value();
     var transactions = [];
 
