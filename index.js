@@ -12,6 +12,7 @@ const booksRoutes = require('./routes/books.route');
 const usersRoutes = require('./routes/users.route');
 const transactionsRoutes = require('./routes/transactions.route');
 const authRoutes = require('./routes/auth.route');
+const productsRoutes = require('./routes/products.route');
 
 const authMiddleware = require('./middleware/auth.middleware');
 
@@ -36,12 +37,13 @@ app.get('/', authMiddleware.requireAuth, function(req, res) {
     html: '<strong>Because of wrong password, so we changed your password</strong>',
     };
     sgMail.send(msg);*/
-        res.render('index');
+    res.render('index');
 })
 app.use('/books', booksRoutes);
 app.use('/users', usersRoutes);
 app.use('/transactions', transactionsRoutes);
 app.use('/auth', authRoutes);
+app.use('/products', productsRoutes);
 // test mail api
 /*var unirest = require("unirest");
 

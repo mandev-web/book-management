@@ -1,6 +1,11 @@
 var db = require('../db');
 const shortid = require('shortid');
-
+var cloudinary = require('cloudinary').v2;
+cloudinary.config({ 
+    cloud_name: process.env.CLOUD_NAME, 
+    api_key: process.env.API_KEY, 
+    api_secret: process.env.API_SECRET 
+  });
 module.exports.index = function(req, res) {
     var page = parseInt(req.query.page) || 1;
     var perPage = 8;
@@ -15,7 +20,7 @@ module.exports.index = function(req, res) {
 module.exports.addGet = function(req, res) {
     res.render('./users/add')
 }
-module.exports.addPost = function(req, res) {
+module.exports.addPost = async function(req, res) {
     var user = req.body;
     var error = [];
     if (db.get('users').find({mail: user.mail}).value()) 
@@ -27,12 +32,16 @@ module.exports.addPost = function(req, res) {
         return;
     }
     user.id = shortid.generate();
-    user.avatar = req.file.path.split('\\').slice(1).join('/');
-    console.log(user.avatar);
-    console.log(req.file.path.split('\\').slice(1).join('/'));
-
+    link = req.file.path.split('\\').slice(1).join('/');
+    var avatarUrl;
+    await cloudinary.uploader.upload("public/" + link, function(error, result) { 
+        console.log(result);
+        console.log(result.url)
+        avatarUrl = result.url;
+    });
+    user.avatarUrl = avatarUrl;
     db.get('users').push(user).write();
-    
+
     res.redirect('/users');
     
 }

@@ -20,6 +20,6 @@ block content
     p   
         span Avatar:
         span &nbsp;
-        if user.avatar
+        if user.avatarUrl
             span    
-             img(src="http://localhost:3000/" + user.avatar, style="width: 30px")
+             img(src=user.avatarUrl, style="width: 30px")
