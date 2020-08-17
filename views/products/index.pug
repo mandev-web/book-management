@@ -10,7 +10,7 @@ block content
                     .card-body
                         h5.card-title= product.title
                         p.card-text=product.content
-                        a.btn.btn-primary(href='#') Go somewhere
+                        a.btn.btn-primary(href='/cart/add/' + product.id) Add to cart
     
     nav(aria-label='Page navigation example')
     ul.pagination

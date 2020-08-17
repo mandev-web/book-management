@@ -13,8 +13,10 @@ const usersRoutes = require('./routes/users.route');
 const transactionsRoutes = require('./routes/transactions.route');
 const authRoutes = require('./routes/auth.route');
 const productsRoutes = require('./routes/products.route');
+const cartRoutes = require('./routes/cart.route');
 
 const authMiddleware = require('./middleware/auth.middleware');
+const sessionMiddleware = require('./middleware/session.middleware');
 
 app.set('view engine', 'pug')
 app.set('views', './views')
@@ -23,7 +25,8 @@ app.set('views', './views')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser(process.env.COOKIE_SECRET));
-
+app.use(sessionMiddleware);
+ 
 app.use(express.static('public'));
 
 app.get('/', authMiddleware.requireAuth, function(req, res) {
@@ -44,6 +47,7 @@ app.use('/users', usersRoutes);
 app.use('/transactions', transactionsRoutes);
 app.use('/auth', authRoutes);
 app.use('/products', productsRoutes);
+app.use('/cart', cartRoutes);
 // test mail api
 /*var unirest = require("unirest");
 

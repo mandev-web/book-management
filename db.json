@@ -398,5 +398,15 @@
       "title": "Flashpoint",
       "content": "Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus."
     }
+  ],
+  "sessions": [
+    {
+      "id": "s5Dw6q63F",
+      "cart": {
+        "63f4a758-95eb-443c-9bca-1589701dc676": 1,
+        "4111ebd1-b295-490c-8a8b-5f9045f89845": 2,
+        "2e490ab2-d96f-4021-a38f-d3b96504e58a": 1
+      }
+    }
   ]
 }
